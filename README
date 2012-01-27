@@ -1,0 +1,8 @@
+A short python script to parse the XML feed coming out of theredditor's blogspot blog, then generate a new feed that contains only links to PDFs.
+
+(Well, only links to tinyurl posts, which tend to point at PDFs).
+
+Dependencies are:
+
+Beautiful Soup
+Feed Parser
