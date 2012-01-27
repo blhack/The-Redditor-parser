@@ -50,10 +50,11 @@ if __name__ == "__main__":
 	<description>A Magazine about Reddit</description>
 	"""
 
+
+	#fetch the data
 	data = fetch_feed("http://theredditorissues.blogspot.com/feeds/posts/default?alt=rss")
-	xml = parse_xml(data)
-	walk_xml(xml)
-	entries = walk_xml(xml)
+	xml = parse_xml(data)  	#turn it into a feedparser object 
+	entries = walk_xml(xml)	#Walk the entires in the XML tree and add their description, as well as their title to a list object
 	for entry in entries:
 		title = entry[0]
 		description = entry[1]
